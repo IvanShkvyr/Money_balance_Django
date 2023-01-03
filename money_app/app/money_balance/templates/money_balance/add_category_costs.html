@@ -1,0 +1,18 @@
+{% extends "money_balance/base.html" %}
+
+{% block content %}
+
+<form method="POST" action="{% url 'money_balance:add_category_costs' %}">
+    {% csrf_token %}
+    <div style="padding: 10px">
+        <label for = "id_name">Введіть нове ім'я категорії витрат: </label>
+        {{form.name}}
+        <span>{{form.errors.name}}</span>
+    </div>
+    <div class="grid">
+        <button type="submit">Підтвердити</button>
+        <button type="reset" class="secondary">Скинути</button>
+    </div>
+</form>
+
+{% endblock %}

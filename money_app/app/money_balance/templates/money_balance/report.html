@@ -1,0 +1,35 @@
+{% extends "money_balance/base.html" %}
+
+{% block content %}
+
+<form method="POST" action="{% url 'money_balance:report' %}">
+    {% csrf_token %}
+
+    <div style="padding: 10px">
+
+        <label for = "id_date_from">Введіть дату початку розрахунку (YYYY-MM-DD):
+        {{form.date_from}}
+        </label>
+      
+        <span>{{form.errors.date_from}}</span>
+      
+      </div>
+      
+      <div style="padding: 10px">
+        
+        <label for = "id_date_to">Введіть дату завершення розрахунку (YYYY-MM-DD):
+        {{form.date_to}}
+        </label>
+      
+        <span>{{form.errors.date_to}}</span>
+      </div>
+
+
+
+    <div class="grid">
+        <button type="submit">Зробити звіт</button>
+        <button type="reset" class="secondary">Скинути</button>
+    </div>
+</form>
+
+{% endblock %}

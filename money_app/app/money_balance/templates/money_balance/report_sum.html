@@ -1,0 +1,13 @@
+{% extends "money_balance/base.html" %}
+
+
+{% block content %}
+
+<h1>в період з {{ date_from }} по {{ date_to }}</h1>
+
+<p>Загальна сума надходжень:<b>{{ total_income.total }}</b></p>
+<p>Загальна сума витрат: <b>{{ total_costs.total }}</b></p>
+<br> 
+<p>Баланс складає: <b>{{ total_money.total }}</b></p>
+
+{% endblock %}

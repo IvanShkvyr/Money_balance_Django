@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "money-app"
+version = "0.1.0"
+description = ""
+authors = ["IvanShkvyr <Gis2011I@gmail.com>"]
+readme = "README.md"
+packages = [{include = "money_app"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.1.4"
+psycopg2 = "^2.9.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Money balance</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <nav style="margin-bottom: 20px; border-bottom: 2px solid; padding-left: 30px" >
+        <ul>
+          <li><a href="{% url 'money_balance:add_income' %}" role="button">Додати надходження</a></li>
+          <li><a href="{% url 'money_balance:add_costs' %}" role="button">Додати витрати</a></li>
+        </ul>
+      </nav>
+      <nav style="margin-bottom: 20px; border-bottom: 2px solid; padding-left: 30px" >
+        <ul>
+          <li><a href="{% url 'money_balance:add_category_costs' %}" role="button">Додати категорію витрат</a></li>
+          <li><a href="{% url 'money_balance:add_category_income' %}" role="button">Додати категорію надходжень</a></li>
+          <li><a href="{% url 'money_balance:report' %}" role="button">Звіт по по обігу коштів</a></li>
+        </ul>
+      </nav>
+    </main>
+  </body>
+</html>
+
